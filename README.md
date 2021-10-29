@@ -1,6 +1,6 @@
 # Readme
 
-Scamazon is a mobile app that uses react for frontend and sql for backend. The app that has 2 types of login :
+Scamazon is a web app that uses HTML & CSS for frontend and sql for backend. The app that has 2 types of login :
 	-	Customer
 	-	Vendor
 
