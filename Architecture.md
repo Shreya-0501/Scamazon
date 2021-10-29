@@ -1,6 +1,9 @@
 
 # Scamazon
 
+## Overview
+Scamazon is a mobile app that uses react for frontend and SQL for backend, it is a tool that connects customers and vendors for easy buying and selling. 
+
 - Native app/ mobile app (front end -> kivy/react)
   - Customer:
     - Just display of orders
@@ -10,7 +13,46 @@
       - Icons for delete on each prod
       - Edit prod info on each prod
 
-- Middleware
+## Frontend design
+
+- First page : choose
+	- **Vendor Login**
+		- Username
+		- Password
+
+	- **Customer login**
+		- Username
+		- Password
+
+### Vendor UI
+
+Pages: 
+- **Your Items**: (Default)
+	- Lists your items
+		- Edit Prod info
+		- Delete Prod
+
+- **Add Items**:
+	- Fill the details of Prod table
+
+### Customer UI
+
+Pages:
+- **Search**: (Default)
+	- Search bar
+	- Filters ( color, brand, vendor, price range )
+	- Sort:
+		- Price ASC
+		- Price DSC
+		- Relevance : Default
+
+- **Your orders**
+	- Lists your orders
+
+**DB connectors**
+
+
+## Backend design
 
 -  Databases with pictures (SQL)
 	- Vendors
@@ -20,8 +62,8 @@
 	- Customers
 		- Can search (with queries)
 		- Customers can see prev/your orders
-
-## Tables
+	
+### Tables
 
 - Vendor table
 	- Vendor ID -> PK
@@ -55,39 +97,6 @@
 
 
 
-## Designing UI
 
-- First page : choose
-	- Vendor Login
-		- Username
-		- Password
 
-	- Customer login
-		- Username
-		- Password
-
-### Vendor UI
-
-Pages: 
-- Your Items: Default
-	- Lists your items
-		- Edit Prod info
-		- Delete Prod
-
-- Add Items:
-	- Fill the details of Prod table
-
-### Customer UI
-
-Pages:
-- Search: (Default)
-	- Search bar
-	- Filters ( color, brand, vendor, price range )
-	- Sort:
-		- Price ASC
-		- Price DSC
-		- Relevance : Default
-
-- Your orders
-	- Lists your orders
 
