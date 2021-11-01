@@ -7,6 +7,7 @@ Scamazon is a mobile app that uses HTML and CSS for frontend and SQL for backend
 - Website consists of mainly 2 divisions
   - Customer:
     - Just display of orders
+    - Search for new products
 
   - Vendor:
     - Your Items:
