@@ -76,7 +76,7 @@ Pages:
 	- Function : Verifies the username and password with the details in database
 
 - Search for products:
-	- Input: product name/tag 
+	- Input: Product name/tag 
 	- Output : All the products related to the search query are displayed
 	- Function : Searches for the product in the database that match with the search query
 
