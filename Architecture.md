@@ -24,6 +24,8 @@ Scamazon is a mobile app that uses react for frontend and SQL for backend, it is
 		- Username
 		- Password
 
+DB connector -> Mysql.connector
+
 ### Vendor UI
 
 Pages: 
