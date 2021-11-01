@@ -2,16 +2,16 @@
 # Scamazon
 
 ## Overview
-Scamazon is a mobile app that uses react for frontend and SQL for backend, it is a tool that connects customers and vendors for easy buying and selling. 
+Scamazon is a mobile app that uses HTML and CSS for frontend and SQL for backend, it is a tool that connects customers and vendors for easy buying and selling, where customers can buy products in one click!
 
-- Native app/ mobile app (front end -> kivy/react)
+- Website consists of mainly 2 divisions
   - Customer:
     - Just display of orders
 
   - Vendor:
     - Your Items:
-      - Icons for delete on each prod
-      - Edit prod info on each prod
+      - Add items
+      - Display items
 
 ## Frontend design
 
@@ -24,15 +24,12 @@ Scamazon is a mobile app that uses react for frontend and SQL for backend, it is
 		- Username
 		- Password
 
-DB connector -> Mysql.connector
-
 ### Vendor UI
 
 Pages: 
 - **Your Items**: (Default)
 	- Lists your items
-		- Edit Prod info
-		- Delete Prod
+		- Add new Prod 
 
 - **Add Items**:
 	- Fill the details of Prod table
@@ -52,7 +49,7 @@ Pages:
 	- Lists your orders
 
 **DB connectors**
-
+Mysql.connector
 
 ## Backend design
 
