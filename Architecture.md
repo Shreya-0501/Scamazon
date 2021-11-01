@@ -15,9 +15,9 @@ Scamazon is a mobile app that uses HTML and CSS for frontend and SQL for backend
       - Display items
 
 
-- Refer to the UI_connect_backend.html document for the diagram that shows how UI is connected to the backend using http requests and how backend connects to the db using Mysql.connector
+- Refer to the UI_connect_backend.png document for the diagram that shows how UI is connected to the backend using http requests and how backend connects to the db using Mysql.connector
 
-- Refer to website_tree.html for flow of the website
+- Refer to website_tree.png for flow of the website
 
 ## Frontend design
 
@@ -54,7 +54,7 @@ Pages:
 - **Your orders**
 	- Lists your orders
 
-- Refer to the flowchart.pptx, website_tree.html to see the flow of frontend
+- Refer to the flowchart.pptx, website_tree.png to see the flow of frontend
 
 
 ## Backend
