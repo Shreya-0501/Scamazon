@@ -111,7 +111,7 @@ Stores the Username, password, and the Vendor ID of the vendor
 Has the details of all the products in the database
 
 	- Prod ID
-	- **Prod photo**
+	- ** Prod photo **
 	- Prod price
 	- Prod name (1st  priority)
 	- Prod category
