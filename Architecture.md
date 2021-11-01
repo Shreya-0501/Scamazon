@@ -54,10 +54,10 @@ Pages:
 - **Your orders**
 	- Lists your orders
 
-**DB connectors**
-Mysql.connector
+- Refer to the flowchart.pptx, website_tree.html to see the flow of frontend
 
-## Backend design
+
+## Backend
 
 -  Databases with pictures (SQL)
 	- Vendors
@@ -90,14 +90,25 @@ Mysql.connector
 	- Output : If all the details are valid (username is unique..) proceeds to the login page, else displays the same page with error messsage
 	- Function : Adds the new customer/vendor to the database
 
+**DB connectors**
+Mysql.connector
+
+## Database
+
 ### Tables
 
 - Vendor table
+
+Stores the Username, password, and the Vendor ID of the vendor
+
 	- Vendor ID -> PK
 	- Username
 	- Password
 
 - Prod table
+
+Has the details of all the products in the database
+
 	- Prod ID
 	- **Prod photo**
 	- Prod price
@@ -112,11 +123,17 @@ Mysql.connector
 	- Tags (2nd Priority)
 
 - Customer Table
+ 
+Stores the Username, password, and the Customer ID of the customer
+	
 	- Customer ID -> PK
 	- Username
 	- Password
 
 - Order History
+
+Has details of all previous orders of the customer
+
 	- Order ID -> PK
 	- Customer ID -> FK
 	- Prod ID -> FK
