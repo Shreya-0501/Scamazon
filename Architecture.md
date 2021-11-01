@@ -91,6 +91,7 @@ Pages:
 	- Function : Adds the new customer/vendor to the database
 
 **DB connectors**
+
 Mysql.connector
 
 ## Database
