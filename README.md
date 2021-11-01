@@ -1,6 +1,6 @@
 # Readme
 
-Scamazon is a web app where you can buy products in one click, it uses HTML & CSS for frontend and sql for backend. The app has 2 types of login :
+Scamazon is a web app where you can buy products in one click, it uses HTML & CSS for frontend and Mysql for backend. The app has 2 types of login :
 	
 - Customer
 - Vendor
