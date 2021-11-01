@@ -68,6 +68,28 @@ Mysql.connector
 		- Can search (with queries)
 		- Customers can see prev/your orders
 	
+### API end points
+
+- Verification of username and password:
+	- Input: Username and password
+	- Output : Proceeds to the next page if all the details are valid, else displays the same page with error
+	- Function : Verifies the username and password with the details in database
+
+- Search for products:
+	- Input: product name/tag 
+	- Output : All the products related to the search query are displayed
+	- Function : Searches for the product in the database that match with the search query
+
+- Add a new product (vendor) : 
+	- Input: All details of the product and its picture
+	- Output : The new product is added to My catalog (vendor)
+	- Function : Adds the new product to the database
+
+- Add a new Customer/Vendor : 
+	- Input: All details of the customer/vendor
+	- Output : If all the details are valid (username is unique..) proceeds to the login page, else displays the same page with error messsage
+	- Function : Adds the new customer/vendor to the database
+
 ### Tables
 
 - Vendor table
