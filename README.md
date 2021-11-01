@@ -1,7 +1,9 @@
 # Readme
 
 Scamazon is a web app where you can buy products in one click, it uses HTML & CSS for frontend and sql for backend. The app has 2 types of login :
+
 	- Customer
+	
 	- Vendor
 
 The vendor has a choice to add and delete products, the customer can buy the products uploaded by the vendor.
