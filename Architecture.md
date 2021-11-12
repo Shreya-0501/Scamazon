@@ -2,7 +2,7 @@
 # Scamazon
 
 ## Overview
-Scamazon is a mobile app that uses HTML and CSS for frontend and SQL for backend, it is a tool that connects customers and vendors for easy buying and selling, where customers can buy products in one click!
+Scamazon is a website that uses HTML and CSS for frontend and SQL for backend, it is a tool that connects customers and vendors for easy buying and selling, where customers can buy shoes in one click!
 
 - Website consists of mainly 2 divisions
   - Customer:
