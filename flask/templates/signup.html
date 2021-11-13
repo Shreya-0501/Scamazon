@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+<form method='POST' action='/user/signup'>
+
+<p>Are you a customer or vendor?</p>
+
+<input type="submit" name="submit_button" value="Customer">
+<input type="submit" name="submit_button" value="Vendor">
+
+
+{% endblock %}

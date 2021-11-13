@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+<p>Hi you clicked the vendor login </p>
+
+<form method='POST' action='/user/login_form'>
+<table>
+<p>Enter the details:</p>
+<p>The username must have atleast 8 char</p>
+<tr><td>Username:</td><td><input name='uname' type='TEXT' width='60'></td></tr>
+<tr><td>Password:</td><td><input name='pwd' type='TEXT' width='60'></td></tr>
+</table>
+<p>Click after filling the above fields:</p>
+<p><input value='Submit!' type='SUBMIT'></p>
+</form>
+{% endblock %}

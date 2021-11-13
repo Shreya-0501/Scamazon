@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='/user/done'>
+<p>Enter the phone number of the user you wish to delete</p>
+<table>
+<p>Use this to delete the user you've created</p>
+<tr><td>Phno:</td><td><input name='phno' type='TEXT' width='60'></td></tr>
+</table>
+<p><input value='Delete!' type='SUBMIT'></p>
+</form>
+
+<!-- <tr><td>Name:</td><td>{{ the_name }}</td></tr> -->
+<!-- <tr><td>DOB:</td><td>{{ the_dob }}</td></tr> -->
+
+<!-- <p>When "{{ name }}" is search for "{{ the_letters }}", the following
+results are returned:</p>
+<h3>{{ the_results }}</h3> -->
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+<p>Hi you clicked the customer signup </p>
+
+<form method='POST' action='/user/sign_form'>
+<table>
+<p>Enter the details:</p>
+<p>The username must have atleast 8 char</p>
+<!-- <tr><td>Name:</td><td><input name='name' type='TEXT' width='60'></td></tr>
+<tr><td>Phno:</td><td><input name='phno' type='TEXT' ></td></tr> -->
+<tr><td>Username:</td><td><input name='uname' type='TEXT' width='60'></td></tr>
+<tr><td>Password:</td><td><input name='pwd' type='TEXT' width='60'></td></tr>
+</table>
+<p>Click after filling the above fields:</p>
+<p><input value='Submit!' type='SUBMIT'></p>
+</form>
+{% endblock %}

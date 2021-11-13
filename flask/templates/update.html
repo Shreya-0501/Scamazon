@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+<form method='POST' action='/user/display2'>
+<table>
+<p>You can only change the name and dob, please enter the phno you've entered before</p>
+<tr><td>Name:</td><td><input name='name' type='TEXT' width='60'></td></tr>
+<tr><td>Phno:</td><td><input name='phno' type='TEXT' width='60'></td></tr>
+<tr><td>DOB(yyyy-mm-dd):</td><td><input name='dob' type='TEXT' width='30' ></td></tr>
+</table>
+<p>Click this after filling the above fields:</p>
+<p><input value='Submit!' type='SUBMIT'></p>
+
+</form>
+{% endblock %}
