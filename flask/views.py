@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from dbhandler import Mysqlhandler, Mysqlhandler2
+from dbhandler import Mysqlhandler#, Mysqlhandler2
 
 app = Flask(__name__)
 
@@ -103,12 +103,15 @@ def sign_form() -> str:
     pwd = request.form['pwd']
     #PHONE = phno
 
-    handleMe2 = Mysqlhandler2()
-    var1 = Mysqlhandler2.signup(handleMe2, uname, pwd)
-    str1 = "You are logged in as " + uname
-    str2 = "Invalid credentials/User doesn't exist"
-    # handleMe2 = Mysqlhandler()
-    # Mysqlhandler.add_user(handleMe2, name, phno, dob)
+    # handleMe2 = Mysqlhandler2()
+    # var1 = Mysqlhandler2.signup(handleMe2, uname, pwd)
+    handleMe = Mysqlhandler()
+    var1 = Mysqlhandler.signup(handleMe, uname, pwd)
+    str1 = "Signed up and auto-Logged in as:" + uname
+    #str1 = "You are logged in as " + uname
+    str2 = "ERROR: USERNAME TAKEN"
+
+
     if(var1 == 1):
         return render_template('results.html',
         the_username=uname, string=str1
