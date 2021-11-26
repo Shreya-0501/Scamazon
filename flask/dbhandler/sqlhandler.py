@@ -58,8 +58,8 @@ class Mysqlhandler:
 
         #app.run(host = "127.0.0.1", port = 5000, debug = True)
 
-class Mysqlhandler2:
-
+    
+    
     def signup(self, uname, pwd):
         ################################################
 
@@ -80,9 +80,9 @@ class Mysqlhandler2:
         passmatch = 0
         signupstat = 0
 
-        mycursor = mydb.cursor()
-        query = "SELECT * FROM " + usertype + ""
-        mycursor.execute(query)
+        mycursor = mydb.cursor(buffered=True)
+        #query = "SELECT * FROM " + usertype + ""
+        mycursor.execute("SELECT * FROM " + usertype + "")
         mydb.commit()
         records = mycursor.fetchall()
 
@@ -91,15 +91,16 @@ class Mysqlhandler2:
                 userexists = 1
                 break
 
-        if(userexists != 1): #if_username_is_available
+        if(userexists != 1): #if_username_is_not_used
 
-            sql_signup_statement = "INSERT INTO buyer (username, pass) VALUES (%s, %s)"
-            sql_value = (enteredname, enteredpass)
+            #sql_signup_statement = "INSERT INTO buyer (username, pass) VALUES (%s, %s)"
+            #sql_value = (enteredname, enteredpass)
 
-            mycursor = mydb.cursor()
-            mycursor.execute(sql_signup_statement, sql_value)
+            mycursor = mydb.cursor(buffered=True)
+            #mycursor.execute(sql_signup_statement, sql_value)
+            mycursor.execute("INSERT INTO buyer (username, pass) VALUES (%s, %s)", (enteredname, enteredpass))
             mydb.commit()
-            records = mycursor.fetchall()
+            #records = mycursor.fetchall()
 
             signupstat = 1
 
@@ -123,7 +124,14 @@ class Mysqlhandler2:
                     userid = records[i][2]
 
             if(userexists == 1 and passmatch == 1):
-                print("\nSigned up and auto-Logged in as:", enteredname)
+                return 1
+                #print("\nSigned up and auto-Logged in as:", enteredname)
 
         else:
-            print("ERROR: USERNAME TAKEN")
+            return 0
+            #print("ERROR: USERNAME TAKEN")
+
+
+# class Mysqlhandler2:
+
+    
