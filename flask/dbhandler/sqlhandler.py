@@ -4,12 +4,11 @@ import mysql.connector
 from mysql.connector import connect, Error
 
 
-#app = Flask(__name__)
-#this
-
 class Mysqlhandler:
 
-    def login(self, uname, pwd):
+    def login(self, uname, pwd, num):
+       
+        ######################################################
 
         mydb = mysql.connector.connect(
             host="localhost",
@@ -18,14 +17,14 @@ class Mysqlhandler:
             database = "challa"
         )
 
-        # enteredname = input("enter username: ")
-        # enteredpass = input("enter password: ")
         enteredname = uname
         enteredpass = pwd
 
-        usertype = "buyer"                  #customer
+        if num == 1:
+            usertype = "buyer"         #either_buyer_or_vender
 
-        ######################################################
+        elif num == 2:
+            usertype = "vendor"
 
         userid = -1
         userexists = 0
@@ -50,17 +49,14 @@ class Mysqlhandler:
 
         if(userexists == 1 and passmatch == 1):
             return 1
-            #print("\nLogged in as:", enteredname)
 
         elif(userexists == 0 or passmatch == 0):
             return 0
-            #print("\nINVALID CREDENTIALS")
-
-        #app.run(host = "127.0.0.1", port = 5000, debug = True)
 
     
     
-    def signup(self, uname, pwd):
+    def signup(self, uname, pwd, num):
+        
         ################################################
 
         mydb = mysql.connector.connect(
@@ -73,7 +69,11 @@ class Mysqlhandler:
         enteredname = uname
         enteredpass = pwd
 
-        usertype = "buyer"                       #either_buyer_or_vender
+        if num == 1:
+            usertype = "buyer"         #either_buyer_or_vender
+
+        elif num == 2:
+            usertype = "vendor"
 
         userid = -1
         userexists = 0
@@ -81,7 +81,6 @@ class Mysqlhandler:
         signupstat = 0
 
         mycursor = mydb.cursor(buffered=True)
-        #query = "SELECT * FROM " + usertype + ""
         mycursor.execute("SELECT * FROM " + usertype + "")
         mydb.commit()
         records = mycursor.fetchall()
@@ -93,14 +92,10 @@ class Mysqlhandler:
 
         if(userexists != 1): #if_username_is_not_used
 
-            #sql_signup_statement = "INSERT INTO buyer (username, pass) VALUES (%s, %s)"
-            #sql_value = (enteredname, enteredpass)
-
             mycursor = mydb.cursor(buffered=True)
-            #mycursor.execute(sql_signup_statement, sql_value)
-            mycursor.execute("INSERT INTO buyer (username, pass) VALUES (%s, %s)", (enteredname, enteredpass))
+            query = "INSERT INTO "+ usertype + "(username, pass)"
+            mycursor.execute(query + "VALUES (%s, %s)", (enteredname, enteredpass))
             mydb.commit()
-            #records = mycursor.fetchall()
 
             signupstat = 1
 
@@ -125,13 +120,8 @@ class Mysqlhandler:
 
             if(userexists == 1 and passmatch == 1):
                 return 1
-                #print("\nSigned up and auto-Logged in as:", enteredname)
 
         else:
             return 0
-            #print("ERROR: USERNAME TAKEN")
-
-
-# class Mysqlhandler2:
 
     
