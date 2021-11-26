@@ -1,2 +1,1 @@
-from .sqlhandler import Mysqlhandler, Mysqlhandler2
-
+from .sqlhandler import Mysqlhandler#, Mysqlhandler2
