@@ -5,18 +5,18 @@ app = Flask(__name__)
 
 PHONE = 0
 
-@app.route('/')
+@app.route('/')                                     #for redirecting to the main page
 def index():
     return redirect(url_for('create_user'))
 
-@app.route('/user_or_not')
+@app.route('/user_or_not')                          #redirects to signup/login based on what is chosen
 def create_user() -> 'html':
     return render_template('entry.html',
     the_title='Are you a user already?')
 
-@app.route('/user/buy_or_sell', methods=['POST'])
-def buy_or_sell() -> str:
 
+@app.route('/user/buy_or_sell', methods=['POST'])   #redirects to login or signup 
+def buy_or_sell() -> 'html':
 
     if request.method == 'POST':
         if request.form['submit_button'] == 'Signup':
@@ -24,9 +24,9 @@ def buy_or_sell() -> str:
         elif request.form['submit_button'] == 'Login':
             return render_template('login.html', the_title='Login as:')
 
-@app.route('/user/signup', methods=['POST'])
-def c_or_v() -> str:
 
+@app.route('/user/signup', methods=['POST'])        #redirects to customer/vendor signup page
+def c_or_v() -> 'html':
 
     if request.method == 'POST':
         if request.form['submit_button'] == 'Customer':
@@ -36,13 +36,14 @@ def c_or_v() -> str:
 
 
 
-@app.route('/user/update', methods=['POST'])
-def update_user() -> str:
+@app.route('/user/update', methods=['POST'])        #
+def update_user() -> 'html':
     return render_template('update.html',
     the_title='Enter the updated details!')
 
-@app.route('/user/login', methods=['POST'])
-def v_l() -> str:
+
+@app.route('/user/login', methods=['POST'])         #redirects to customer/vendor login page
+def v_l() -> 'html':
 
     if request.method == 'POST':
         if request.form['submit_button'] == 'Customer':
@@ -52,21 +53,21 @@ def v_l() -> str:
 
 
 
-@app.route('/user/delete', methods=['POST'])
-def delete_user() -> str:
+@app.route('/user/delete', methods=['POST'])        #
+def delete_user() -> 'html':
 
     return render_template('delete.html',
     )
 
-@app.route('/user/done', methods=['POST'])
-def done() -> str:
+@app.route('/user/done', methods=['POST'])          #
+def done() -> 'html':
     phno = request.form['phno']
 
     return render_template('done.html',
     )
 
-@app.route('/user/sign_form', methods=['POST']) #for buyer -> customer
-def sign_form() -> str:
+@app.route('/user/sign_form', methods=['POST'])     # for buyer -> customer signup
+def sign_form() -> 'html':
 
     uname = request.form['uname']
     pwd = request.form['pwd']
@@ -86,8 +87,8 @@ def sign_form() -> str:
         the_username=uname, string=str2
         )
 
-@app.route('/user/sign_form2', methods=['POST']) #for vendor 
-def sign_form2() -> str:
+@app.route('/user/sign_form2', methods=['POST'])    #for vendor signup
+def sign_form2() -> 'html':
 
     uname = request.form['uname']
     pwd = request.form['pwd']
@@ -107,8 +108,8 @@ def sign_form2() -> str:
         the_username=uname, string=str2
         )
 
-@app.route('/user/login_form', methods=['POST'])    #for buyer->customer
-def login_form() -> str:
+@app.route('/user/login_form', methods=['POST'])    #for buyer->customer login
+def login_form() -> 'html':
 
     uname = request.form['uname']
     pwd = request.form['pwd']
@@ -127,8 +128,8 @@ def login_form() -> str:
         the_username=uname, string=str2
         )
 
-@app.route('/user/login_form2', methods=['POST'])   #for vendor
-def login_form2() -> str:
+@app.route('/user/login_form2', methods=['POST'])   #for vendor login
+def login_form2() -> 'html':
 
     uname = request.form['uname']
     pwd = request.form['pwd']
