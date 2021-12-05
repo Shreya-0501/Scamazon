@@ -53,6 +53,4 @@ INSERT INTO items (i_name, listedon, listedby)VALUE
 
 SELECT*FROM items;
 
-SELECT*FROM items WHERE listedby = 1 ORDER BY listedon;
-
 DROP TABLE items;
