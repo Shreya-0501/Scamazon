@@ -18,12 +18,12 @@ mydb = mysql.connector.connect(
 
 now = datetime.now()
 
+mycursor = mydb.cursor()
+mycursor.execute(sql_item_listing_statement, sql_item_value)
+
 sql_item_listing_statement = "SELECT*FROM items WHERE listedby = %s ORDER BY listedon;"
 sql_item_value = (vendorid)
 
-
-mycursor = mydb.cursor()
-mycursor.execute(sql_item_listing_statement, sql_item_value)
 records = mycursor.fetchall()
 
 print("items by ", vendorid, "\n")
