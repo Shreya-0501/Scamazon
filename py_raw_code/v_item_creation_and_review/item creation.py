@@ -19,12 +19,11 @@ mydb = mysql.connector.connect(
 
 now = datetime.now()
 
-mycursor = mydb.cursor()
-mycursor.execute(sql_item_listing_statement, sql_item_value)
-
 sql_item_listing_statement = "INSERT INTO items (i_name, listedon, listedby)VALUE (%s, %s, %s);"
 sql_item_value = (item_name, now, vendorid)
 
+mycursor = mydb.cursor()
+mycursor.execute(sql_item_listing_statement, sql_item_value)
 mydb.commit()
 
 print("item ", item_name, "added by ", vendorid)
