@@ -28,9 +28,9 @@ sql_search = "SELECT*FROM items WHERE"
 
 for x in range(len(split)):
     if(x == 0):
-        sql_search = sql_search + " i_name LIKE " + split[x]
+        sql_search = sql_search + " i_name LIKE %" + split[x] + "%"
     else:
-        sql_search = sql_search + " OR i_name LIKE " + split[x]
+        sql_search = sql_search + " OR i_name LIKE %" + split[x] + "%"
 
 sql_search = sql_search + ";"
 
