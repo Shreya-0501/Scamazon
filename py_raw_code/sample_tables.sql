@@ -53,4 +53,28 @@ INSERT INTO items (i_name, listedon, listedby)VALUE
 
 SELECT*FROM items;
 
+SELECT*FROM items WHERE listedby = 1 ORDER BY listedon;
+
+SELECT*FROM items WHERE i_name LIKE '%blue%';
+
 DROP TABLE items;
+
+/*////////////////////////////////*/
+
+CREATE TABLE orders(
+    ordered_id INT,
+    o_date DATETIME,
+    ordered_by INT,
+    o_id INT PRIMARY KEY AUTO_INCREMENT,
+    FOREIGN KEY(ordered_id) REFERENCES items (i_id),
+    FOREIGN KEY(ordered_by) REFERENCES buyer (buyerid)
+);
+
+INSERT INTO orders (ordered_id, o_date, ordered_by)VALUE
+(1, '2020-09-14 23:18:18', 2),
+(2, '2020-09-14 23:18:20', 1)
+;
+
+SELECT*FROM orders;
+
+DROP TABLE orders;
