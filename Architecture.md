@@ -7,12 +7,12 @@ Scamazon is a website that uses HTML and CSS for frontend and SQL for backend, i
 - Website consists of mainly 2 divisions
   - Customer:
     - Display of orders
-    - Search for new products
+    - Display of products
 
   - Vendor:
     - Your Items:
       - Add items
-      - Display items
+      - Display of added items
 
 
 - Refer to the UI_connect_backend.png document for the diagram that shows how UI is connected to the backend using http requests and how backend connects to the db using Mysql.connector
@@ -38,7 +38,7 @@ Pages:
 		- Add new Prod 
 
 - **Add Items**:
-	- Fill the details of Prod table
+	- Fill the name of Prod 
 
 ### Customer UI
 
@@ -54,11 +54,10 @@ Pages:
 
 -  Databases with pictures (SQL)
 	- Vendors
-		- Can upload pictures, prod description
+		- Can upload prod name
 		- Your Items
 
 	- Customers
-		- Can search (with queries)
 		- Customers can see prev/your orders
 	
 ### API end points
@@ -80,7 +79,7 @@ Pages:
 
 **DB connectors**
 
-Mysql.connector
+Mysql.connector (mysql-connector-python)
 
 ## Database
 
@@ -94,22 +93,13 @@ Stores the Username, password, and the Vendor ID of the vendor
 	- Username
 	- Password
 
-- Prod table
+- Items table
 
 Has the details of all the products in the database
 
-	- Prod ID
-	- ** Prod photo **
-	- Prod price
+	- Item ID
 	- Prod name (1st  priority)
-	- Prod category
-		- Sports
-		- Electronics
-		- Kitchen
-		- Clothing
-		- Books
 	- Vendor ID -> FK
-	- Tags (2nd Priority)
 
 - Customer Table
  
@@ -126,7 +116,7 @@ Has details of all previous orders of the customer
 	- Order ID -> PK
 	- Customer ID -> FK
 	- Prod ID -> FK
-	- Date
+	- Date and time
 
 
 
