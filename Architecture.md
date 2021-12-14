@@ -43,13 +43,6 @@ Pages:
 ### Customer UI
 
 Pages:
-- **Search**: (Default)
-	- Search bar
-	- Filters ( color, brand, vendor, price range )
-	- Sort:
-		- Price ASC
-		- Price DSC
-		- Relevance : Default
 
 - **Your orders**
 	- Lists your orders
