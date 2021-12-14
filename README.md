@@ -5,7 +5,7 @@ Scamazon is a web app where you can buy items in one click, it uses HTML & CSS f
 - Customer
 - Vendor
 
-The vendor has a choice to add and see the uploaded products, the customer can buy the products uploaded by the vendor, and can their his/her previous orders.
+The vendor has a choice to add and see the uploaded products, the customer can buy the products uploaded by the vendor, and can see their previous orders.
 After placing an order, the customer can view their orders.
 
 ## Requirements
