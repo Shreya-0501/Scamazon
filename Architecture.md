@@ -68,11 +68,6 @@ Pages:
 	- Output : Proceeds to the next page if all the details are valid, else displays the same page with error
 	- Function : Verifies the username and password with the details in database
 
-- Search for products:
-	- Input: Product name/tag 
-	- Output : All the products related to the search query are displayed
-	- Function : Searches for the product in the database that match with the search query
-
 - Add a new product (vendor) : 
 	- Input: All details of the product and its picture
 	- Output : The new product is added to My catalog (vendor)
