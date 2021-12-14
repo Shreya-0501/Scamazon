@@ -14,8 +14,8 @@ After placing an order, the customer can view their orders.
 	- (pip install Flask)
 - Python==3.9.5
 - MySQL
-- mysqlconnector
-	- (python3 -m pip install mysqlconnector)
+- mysql-connector-python
+	- (python3 -m pip install mysql-connector-python)
 
 - The following are  downloaded automatically when you download flask
 
