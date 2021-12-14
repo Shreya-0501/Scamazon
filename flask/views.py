@@ -147,5 +147,27 @@ def login_form2() -> 'html':
         return render_template('results2.html',
         the_username=uname, string=str2
         )
+@app.route('/user/prod', methods=['POST', 'GET'])   #for products
+def prod() -> 'html':
 
+    msg = ''
+    var1 = []
+
+    handleMe2 = Mysqlhandler()
+    var1 = Mysqlhandler.product(handleMe2)                  #all products are stored in list
+
+    return render_template('prod2.html', products=var1)
+
+
+@app.route('/user/search', methods=['POST', 'GET'])   #for products
+def search():
+    search_req = request.form['search_in']
+    print(">>>>>>>>>>>>>>>>>>>>>>>>>>>")
+    print(search_req)
+
+    handleMe2 = Mysqlhandler()
+    records = Mysqlhandler.search(handleMe2, search_req)
+    print("tftftftftftftftftfftttft")
+    print(records)
+    return render_template('prod2.html', products=records)
 app.run(host = "127.0.0.1", port = 5000, debug = True)
