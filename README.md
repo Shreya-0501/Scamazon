@@ -6,7 +6,29 @@ Scamazon is a web app where you can buy items in one click, it uses HTML & CSS f
 - Vendor
 
 The vendor has a choice to add and see the uploaded products, the customer can buy the products uploaded by the vendor, and can their his/her previous orders.
-There are options to filter, sort and search products using tags.
-After placing an order, the customer can view their orders, and tracking details.
+After placing an order, the customer can view their orders.
 
-The pictures that are uploaded by the vendor are stored in the database using MySQL. 
+## Requirements
+
+- Flask==1.0.2
+	- (pip install Flask)
+- Python==3.9.5
+- MySQL
+- mysqlconnector
+	- (python3 -m pip install mysqlconnector)
+
+- The following are  downloaded automatically when you download flask
+
+	- itsdangerous==1.1.0 		
+	- Jinja2==2.10.1					
+	- MarkupSafe==1.1.1			
+	- Werkzeug==0.15.2			
+
+## How to run
+
+Go to the directive project/flask
+- cd project/flask
+- python3 views.py
+	- Copy the link shown in the terminal to your browser
+
+
